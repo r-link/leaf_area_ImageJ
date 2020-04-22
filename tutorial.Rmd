@@ -5,26 +5,26 @@ This is a simple tutorial for the measurement of leaf area with [ImageJ](https:/
 
 1. Open the calibration file with ImageJ (drag and drop onto the program or use the Open dialog).
 
-1. Select the Straight line tool and follow the outer margin of the largest square in the calibration file.
+2. Select the Straight line tool and follow the outer margin of the largest square in the calibration file.
 
 ![](figures/fig1.png)
 
 
-1. Set the scale by going to the __Analyze ➜ Set Scale__ menu.
+3. Set the scale by going to the __Analyze ➜ Set Scale__ menu.
 
 
-1. In the corresponding dialog, set **Known Distance** to **4 cm**, the **Unit of length** to **cm** and - *very important* - mark the box **Global** to make sure that the scale is the same accross all opened documents.
+4. In the corresponding dialog, set **Known Distance** to **4 cm**, the **Unit of length** to **cm** and - *very important* - mark the box **Global** to make sure that the scale is the same accross all opened documents.
 
 ![](figures/fig2.png)
 
-1. Open the file with the image you want to analyze in ImageJ (drag and drop!). If setting the scale worked, the size of the image should now be specified in cm in the upper right corner of the image. If a popup opens asking you whether you want to keep the global calibration, say yes!
+5. Open the file with the image you want to analyze in ImageJ (drag and drop!). If setting the scale worked, the size of the image should now be specified in cm in the upper right corner of the image. If a popup opens asking you whether you want to keep the global calibration, say yes!
 
 ![](figures/fig3.png)
 
 
-1. Make sure that the image is in an 8bit black and white format (click on __Image ➜ Type ➜ 8bit__) to avoid problems with thresholding. 
+6. Make sure that the image is in an 8bit black and white format (click on __Image ➜ Type ➜ 8bit__) to avoid problems with thresholding. 
 
-1. Set a black/white threshold
+7. Set a black/white threshold
     * Open the __Threshold__ dialog (__Image  ➜  Threshold__ or _Ctrl + Shift + T_),
     * Choose the options __Default__ and __B&W__ and uncheck the box __Dark background__,
     * If necessary, move the sliders until the leafs are well separated from the background with as few white pixels within the leaves as possible,
@@ -32,19 +32,19 @@ This is a simple tutorial for the measurement of leaf area with [ImageJ](https:/
 
 ![](figures/fig4.png)
 
-1. If there are holes (especially close to the leaf margins), pick the _Pipette_ tool and click on a black area in the image.
+8. If there are holes (especially close to the leaf margins), pick the _Pipette_ tool and click on a black area in the image.
 
 ![](figures/fig5.png)
 
-1. Now, choose the _Pencil tool_ and close the holes manually.
+9. Now, choose the _Pencil tool_ and close the holes manually.
 
 ![](figures/fig6.png)
 
-1. Open the set measurements dialog (_Analyze ➜ Set Measurements_), uncheck everything besides _Area_, and click _OK_.
+10. Open the set measurements dialog (_Analyze ➜ Set Measurements_), uncheck everything besides _Area_, and click _OK_.
 
 ![](figures/fig7.png)
 
-1. Open the _Analyze Particles_ dialog (_Analyze ➜ Analyze Particles_) and choose the following settings:
+11. Open the _Analyze Particles_ dialog (_Analyze ➜ Analyze Particles_) and choose the following settings:
   * _Size_: 0-Infinity
   * _Roundness_: 0-1
   * Show: Outlines
@@ -52,7 +52,7 @@ This is a simple tutorial for the measurement of leaf area with [ImageJ](https:/
 
 ![](figures/fig8.png)
 
-1. Look at the outlines to check if non-leaf particles were measured.
+12. Look at the outlines to check if non-leaf particles were measured.
   * Solutions if there are small non-leaf particles:
     * Use the pencil tool to remove small artefacts
     * Use the rectangle tool (left end of the toolbar) to choose a subset of the Image area (useful if there are shading artefacts near the borders)
@@ -65,12 +65,12 @@ _initial run:_
 _after setting Size to 1-Infinity cm²:_
 ![](figures/fig10.png)
 
-1. Click on the outline file and choose _File ➜ Save as ➜ Jpeg_ in the main window to save it (append the original filename to `name_outlines.jpg`)
+13. Click on the outline file and choose _File ➜ Save as ➜ Jpeg_ in the main window to save it (append the original filename to `name_outlines.jpg`)
 
 
-1. Choose  _File ➜ Save as_ in the Results window to save the leaf area measurements as `name_results.xls`.
+14. Choose  _File ➜ Save as_ in the Results window to save the leaf area measurements as `name_results.xls`.
 
-1. Your project folder should look like this now:
+15. Your project folder should look like this now:
 
 ![](figures/fig11.png)
 

@@ -19,16 +19,16 @@ which is meant for in-class use.
 
 ![](figures/fig1.png)
 
-1.  Set the scale by going to the **Analyze ➜ Set Scale** menu.
+3.  Set the scale by going to the **Analyze ➜ Set Scale** menu.
 
-2.  In the corresponding dialog, set **Known Distance** to **4 cm**, the
+4.  In the corresponding dialog, set **Known Distance** to **4 cm**, the
     **Unit of length** to **cm** and - *very important* - mark the box
     **Global** to make sure that the scale is the same accross all
     opened documents.
 
 ![](figures/fig2.png)
 
-1.  Open the file with the image you want to analyze in ImageJ (drag and
+5.  Open the file with the image you want to analyze in ImageJ (drag and
     drop\!). If setting the scale worked, the size of the image should
     now be specified in cm in the upper right corner of the image. If a
     popup opens asking you whether you want to keep the global
@@ -36,10 +36,10 @@ which is meant for in-class use.
 
 ![](figures/fig3.png)
 
-1.  Make sure that the image is in an 8bit black and white format (click
+6.  Make sure that the image is in an 8bit black and white format (click
     on **Image ➜ Type ➜ 8bit**) to avoid problems with thresholding.
 
-2.  Set a black/white threshold
+7.  Set a black/white threshold
     
       - Open the **Threshold** dialog (**Image ➜ Threshold** or *Ctrl +
         Shift + T*),
@@ -52,21 +52,21 @@ which is meant for in-class use.
 
 ![](figures/fig4.png)
 
-1.  If there are holes (especially close to the leaf margins), pick the
+8.  If there are holes (especially close to the leaf margins), pick the
     *Pipette* tool and click on a black area in the image.
 
 ![](figures/fig5.png)
 
-1.  Now, choose the *Pencil tool* and close the holes manually.
+9.  Now, choose the *Pencil tool* and close the holes manually.
 
 ![](figures/fig6.png)
 
-1.  Open the set measurements dialog (*Analyze ➜ Set Measurements*),
+10. Open the set measurements dialog (*Analyze ➜ Set Measurements*),
     uncheck everything besides *Area*, and click *OK*.
 
 ![](figures/fig7.png)
 
-1.  Open the *Analyze Particles* dialog (*Analyze ➜ Analyze Particles*)
+11. Open the *Analyze Particles* dialog (*Analyze ➜ Analyze Particles*)
     and choose the following settings:
 
 <!-- end list -->
@@ -78,7 +78,7 @@ which is meant for in-class use.
 
 ![](figures/fig8.png)
 
-1.  Look at the outlines to check if non-leaf particles were measured.
+12. Look at the outlines to check if non-leaf particles were measured.
 
 <!-- end list -->
 
@@ -94,13 +94,13 @@ which is meant for in-class use.
 
 *after setting Size to 1-Infinity cm²:* ![](figures/fig10.png)
 
-1.  Click on the outline file and choose *File ➜ Save as ➜ Jpeg* in the
+13. Click on the outline file and choose *File ➜ Save as ➜ Jpeg* in the
     main window to save it (append the original filename to
     `name_outlines.jpg`)
 
-2.  Choose *File ➜ Save as* in the Results window to save the leaf area
+14. Choose *File ➜ Save as* in the Results window to save the leaf area
     measurements as `name_results.xls`.
 
-3.  Your project folder should look like this now:
+15. Your project folder should look like this now:
 
 ![](figures/fig11.png)
