@@ -9,10 +9,18 @@ This is a simple tutorial for the measurement of leaf area with
 post](https://rookieecologist.wordpress.com/2016/11/21/how-to-measure-leaf-area-in-imagej/)
 which is meant for in-class use.
 
+**IMPORTANT:** Before you start with the analysis, make sure that the
+options for analyzing threshold images are correctly set. Go to
+**Process ➜ Binary ➜ Options** and make sure that the box **Black
+background** is not marked to avoid problems with the particle analysis
+macro.
+
+![](figures/binary_options.png)
+
 # Step-by-step tutorial
 
 1.  Open the calibration file with ImageJ (drag and drop onto the
-    program or use the Open dialog).
+    program or use the Open dialogue).
 
 2.  Select the Straight line tool and follow the outer margin of the
     largest square in the calibration file.
@@ -21,9 +29,9 @@ which is meant for in-class use.
 
 3.  Set the scale by going to the **Analyze ➜ Set Scale** menu.
 
-4.  In the corresponding dialog, set **Known Distance** to **4 cm**, the
-    **Unit of length** to **cm** and - *very important* - mark the box
-    **Global** to make sure that the scale is the same accross all
+4.  In the corresponding dialogue, set **Known Distance** to **4 cm**,
+    the **Unit of length** to **cm** and - *very important* - mark the
+    box **Global** to make sure that the scale is the same accross all
     opened documents.
 
 ![](figures/fig2.png)
@@ -41,8 +49,8 @@ which is meant for in-class use.
 
 7.  Set a black/white threshold
     
-      - Open the **Threshold** dialog (**Image ➜ Threshold** or *Ctrl +
-        Shift + T*),
+      - Open the **Threshold** dialogue (**Image ➜ Threshold** or *Ctrl
+        + Shift + T*),
       - Choose the options **Default** and **B\&W** and uncheck the box
         **Dark background**,
       - If necessary, move the sliders until the leafs are well
@@ -61,13 +69,13 @@ which is meant for in-class use.
 
 ![](figures/fig6.png)
 
-10. Open the set measurements dialog (*Analyze ➜ Set Measurements*),
+10. Open the set measurements dialogue (*Analyze ➜ Set Measurements*),
     uncheck everything besides *Area*, and click *OK*.
 
 ![](figures/fig7.png)
 
-11. Open the *Analyze Particles* dialog (*Analyze ➜ Analyze Particles*)
-    and choose the following settings:
+11. Open the *Analyze Particles* dialogue (*Analyze ➜ Analyze
+    Particles*) and choose the following settings:
 
 <!-- end list -->
 
