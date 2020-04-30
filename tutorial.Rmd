@@ -1,7 +1,19 @@
 # Introduction {-} 
 This is a simple tutorial for the measurement of leaf area with [ImageJ](https://imagej.nih.gov/ij/) based on [this great blog post](https://rookieecologist.wordpress.com/2016/11/21/how-to-measure-leaf-area-in-imagej/) which is meant for in-class use.
 
-__IMPORTANT:__ Before you start with the analysis, make sure that the options for analyzing threshold images are correctly set. Go to __Process ➜ Binary ➜ Options__ and make sure that the box __Black background__ is not marked to avoid problems with the particle analysis macro.
+
+# Important note {-}
+All ImageJ results tables can be saved either in 'Comma Separated Value' (`.csv`) or whitespace/tabstop separated format (generated when saving with a `.xls` extension, but actually just a plain text format). In either case, the output is optimized for US/UK locales, which means that points are used as a decimal separator. In order to process these files on German systems without compatibility issues, it is important to make sure that the system-wide decimal separator is correctly set before starting the analysis.
+
+In German Windows 10, the option to change the decimal separator is well hidden:
+
+__Start Menu ➜ Windows-System ➜ Systemsteuerung ➜ Zeit und Region ➜  Region ➜ Formate ➜ Weitere Einstellungen ➜ Dezimaltrennzeichen__  
+
+To avoid data compatibility problems, make sure the decimal separator is set to ".". In this case, you will want the grouping symbol (__Symbol für Zifferngruppierung__) to be a comma instead of the point symbol used in Germany.
+
+If you do not want to change your system settings, you can alternatively export everything in a `.csv` format and use Excel's __Daten ➜ Text in Spalten__ menu to manually set field delimitor and decimal separator.
+
+In addition, before you start with the analysis, make sure that the options for analyzing threshold images are correctly set. Go to __Process ➜ Binary ➜ Options__ and make sure that the box __Black background__ is not marked to avoid problems with the particle analysis macro.
 
 ![](figures/binary_options.png)
 

@@ -9,7 +9,33 @@ This is a simple tutorial for the measurement of leaf area with
 post](https://rookieecologist.wordpress.com/2016/11/21/how-to-measure-leaf-area-in-imagej/)
 which is meant for in-class use.
 
-**IMPORTANT:** Before you start with the analysis, make sure that the
+# Important note
+
+All ImageJ results tables can be saved either in ‘Comma Separated Value’
+(`.csv`) or whitespace/tabstop separated format (generated when saving
+with a `.xls` extension, but actually just a plain text format). In
+either case, the output is optimized for US/UK locales, which means that
+points are used as a decimal separator. In order to process these files
+on German systems without compatibility issues, it is important to make
+sure that the system-wide decimal separator is correctly set before
+starting the analysis.
+
+In German Windows 10, the option to change the decimal separator is well
+hidden:
+
+**Start Menu ➜ Windows-System ➜ Systemsteuerung ➜ Zeit und Region ➜
+Region ➜ Formate ➜ Weitere Einstellungen ➜ Dezimaltrennzeichen**
+
+To avoid data compatibility problems, make sure the decimal separator is
+set to “.”. In this case, you will want the grouping symbol (**Symbol
+für Zifferngruppierung**) to be a comma instead of the point symbol
+used in Germany.
+
+If you do not want to change your system settings, you can alternatively
+export everything in a `.csv` format and use Excel’s **Daten ➜ Text in
+Spalten** menu to manually set field delimitor and decimal separator.
+
+In addition, before you start with the analysis, make sure that the
 options for analyzing threshold images are correctly set. Go to
 **Process ➜ Binary ➜ Options** and make sure that the box **Black
 background** is not marked to avoid problems with the particle analysis
