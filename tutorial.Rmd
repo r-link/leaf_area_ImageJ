@@ -66,7 +66,7 @@ In addition, before you start with the analysis, make sure that the options for 
   * _Size_: 0-Infinity
   * _Roundness_: 0-1
   * Show: Outlines
-  * Check _Display results_, _Clear results_ and _Include holes_
+  * Check _Display results_, _Clear results_ and _Include holes_ (if there is more than one scan per sample, it can also be a good idea _not_ to choose _Clear results_ to be able to combine the measurements of all scans and save all results together in a single file)
 
 ![](figures/fig8.png)
 

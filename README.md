@@ -108,7 +108,11 @@ macro.
   - *Size*: 0-Infinity
   - *Roundness*: 0-1
   - Show: Outlines
-  - Check *Display results*, *Clear results* and *Include holes*
+  - Check *Display results*, *Clear results* and *Include holes* (if
+    there is more than one scan per sample, it can also be a good idea
+    *not* to choose *Clear results* to be able to combine the
+    measurements of all scans and save all results together in a single
+    file)
 
 ![](figures/fig8.png)
 
