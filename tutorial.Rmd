@@ -21,9 +21,9 @@ In addition, before you start with the analysis, make sure that the options for 
 
 # Step-by-step tutorial
 
-1. Open the calibration file with ImageJ (drag and drop onto the program or use the Open dialogue).
+1. Open the calibration file with ImageJ (drag and drop onto the program or use the Open dialogue). The calibration file should contain a size reference with a known length. In this example, the calibration file (prepared for the analysis with a different software) contained three paper squares of known area and side length, but in theory any reference of known dimensions will suffice (e.g. a ruler or millimeter paper). 
 
-2. Select the Straight line tool and follow the outer margin of the largest square in the calibration file.
+2. To calibrate, Select the Straight line tool and trace the size reference (in the given example, I followed the outer margin of the largest square in the calibration file, which I knew to be 4 x 4 cm²).
 
 ![](figures/fig1.png)
 
@@ -31,11 +31,11 @@ In addition, before you start with the analysis, make sure that the options for 
 3. Set the scale by going to the __Analyze ➜ Set Scale__ menu.
 
 
-4. In the corresponding dialogue, set **Known Distance** to **4 cm**, the **Unit of length** to **cm** and - *very important* - mark the box **Global** to make sure that the scale is the same accross all opened documents.
+4. In the corresponding dialogue, set **Known Distance** to the known reference value (in this case, **4 cm**), the **Unit of length** to **cm** and - *very important* - mark the box **Global** to make sure that the scale is the same across all opened documents.
 
 ![](figures/fig2.png)
 
-5. Open the file with the image you want to analyze in ImageJ (drag and drop!). If setting the scale worked, the size of the image should now be specified in cm in the upper right corner of the image. If a popup opens asking you whether you want to keep the global calibration, say yes!
+5. Open the file with the image you want to analyze in ImageJ (drag and drop!). If setting the scale worked, the size of the image should now be specified in cm in the upper right corner of the image. If a popup window opens asking you whether you want to keep the global calibration, say yes!
 
 ![](figures/fig3.png)
 
@@ -50,11 +50,11 @@ In addition, before you start with the analysis, make sure that the options for 
 
 ![](figures/fig4.png)
 
-8. If there are holes (especially close to the leaf margins), pick the _Pipette_ tool and click on a black area in the image.
+8. If there are holes in the leaves that connect with the leaf margins, pick the _Pipette_ tool and click on a black area in the image. Holes that are in the middle of the leaf do not have to be fixed as they will not affect the measurement if the "Include holes" option is selected (see below).
 
 ![](figures/fig5.png)
 
-9. Now, choose the _Pencil tool_ and close the holes manually.
+9. Now, choose the _Pencil tool_ and close the holes manually (I closed all, but that's not necessary).
 
 ![](figures/fig6.png)
 
@@ -63,8 +63,8 @@ In addition, before you start with the analysis, make sure that the options for 
 ![](figures/fig7.png)
 
 11. Open the _Analyze Particles_ dialogue (_Analyze ➜ Analyze Particles_) and choose the following settings:
-  * _Size_: 0-Infinity
-  * _Roundness_: 0-1
+  * _Size_: 0-Infinity [0 is chosen to demonstrate the effect of a small minimum value (see next points) - in most cases it makes sense to start from 1-Infinity right away]
+  * _Roundness_: 0-1 
   * Show: Outlines
   * Check _Display results_, _Clear results_ and _Include holes_ (if there is more than one scan per sample, it can also be a good idea _not_ to choose _Clear results_ to be able to combine the measurements of all scans and save all results together in a single file)
 
@@ -74,7 +74,7 @@ In addition, before you start with the analysis, make sure that the options for 
   * Solutions if there are small non-leaf particles:
     * Use the pencil tool to remove small artefacts
     * Use the rectangle tool (left end of the toolbar) to choose a subset of the Image area (useful if there are shading artefacts near the borders)
-    * Repeat the _Analyze Particles_ step with a minimum value for _Size_
+    * Repeat the _Analyze Particles_ step with a different minimum value for _Size_
 
 
 _initial run:_

@@ -28,8 +28,8 @@ Region ➜ Formate ➜ Weitere Einstellungen ➜ Dezimaltrennzeichen**
 
 To avoid data compatibility problems, make sure the decimal separator is
 set to “.”. In this case, you will want the grouping symbol (**Symbol
-für Zifferngruppierung**) to be a comma instead of the point symbol
-used in Germany.
+für Zifferngruppierung**) to be a comma instead of the point symbol used
+in Germany.
 
 If you do not want to change your system settings, you can alternatively
 export everything in a `.csv` format and use Excel’s **Daten ➜ Text in
@@ -46,69 +46,80 @@ macro.
 # Step-by-step tutorial
 
 1.  Open the calibration file with ImageJ (drag and drop onto the
-    program or use the Open dialogue).
+    program or use the Open dialogue). The calibration file should
+    contain a size reference with a known length. In this example, the
+    calibration file (prepared for the analysis with a different
+    software) contained three paper squares of known area and side
+    length, but in theory any reference of known dimensions will suffice
+    (e.g. a ruler or millimeter paper).
 
-2.  Select the Straight line tool and follow the outer margin of the
-    largest square in the calibration file.
+2.  To calibrate, Select the Straight line tool and trace the size
+    reference (in the given example, I followed the outer margin of the
+    largest square in the calibration file, which I knew to be 4 x 4
+    cm²).
 
 ![](figures/fig1.png)
 
-3.  Set the scale by going to the **Analyze ➜ Set Scale** menu.
+1.  Set the scale by going to the **Analyze ➜ Set Scale** menu.
 
-4.  In the corresponding dialogue, set **Known Distance** to **4 cm**,
-    the **Unit of length** to **cm** and - *very important* - mark the
-    box **Global** to make sure that the scale is the same accross all
-    opened documents.
+2.  In the corresponding dialogue, set **Known Distance** to the known
+    reference value (in this case, **4 cm**), the **Unit of length** to
+    **cm** and - *very important* - mark the box **Global** to make sure
+    that the scale is the same across all opened documents.
 
 ![](figures/fig2.png)
 
-5.  Open the file with the image you want to analyze in ImageJ (drag and
-    drop\!). If setting the scale worked, the size of the image should
+1.  Open the file with the image you want to analyze in ImageJ (drag and
+    drop!). If setting the scale worked, the size of the image should
     now be specified in cm in the upper right corner of the image. If a
-    popup opens asking you whether you want to keep the global
-    calibration, say yes\!
+    popup window opens asking you whether you want to keep the global
+    calibration, say yes!
 
 ![](figures/fig3.png)
 
-6.  Make sure that the image is in an 8bit black and white format (click
+1.  Make sure that the image is in an 8bit black and white format (click
     on **Image ➜ Type ➜ 8bit**) to avoid problems with thresholding.
 
-7.  Set a black/white threshold
-    
-      - Open the **Threshold** dialogue (**Image ➜ Threshold** or *Ctrl
-        + Shift + T*),
-      - Choose the options **Default** and **B\&W** and uncheck the box
+2.  Set a black/white threshold
+
+    -   Open the **Threshold** dialogue (**Image ➜ Threshold** or
+        *Ctrl + Shift + T*),
+    -   Choose the options **Default** and **B&W** and uncheck the box
         **Dark background**,
-      - If necessary, move the sliders until the leafs are well
+    -   If necessary, move the sliders until the leafs are well
         separated from the background with as few white pixels within
         the leaves as possible,
-      - press **Apply** and close the **Threshold** window.
+    -   press **Apply** and close the **Threshold** window.
 
 ![](figures/fig4.png)
 
-8.  If there are holes (especially close to the leaf margins), pick the
-    *Pipette* tool and click on a black area in the image.
+1.  If there are holes in the leaves that connect with the leaf margins,
+    pick the *Pipette* tool and click on a black area in the image.
+    Holes that are in the middle of the leaf do not have to be fixed as
+    they will not affect the measurement if the “Include holes” option
+    is selected (see below).
 
 ![](figures/fig5.png)
 
-9.  Now, choose the *Pencil tool* and close the holes manually.
+1.  Now, choose the *Pencil tool* and close the holes manually (I closed
+    all, but that’s not necessary).
 
 ![](figures/fig6.png)
 
-10. Open the set measurements dialogue (*Analyze ➜ Set Measurements*),
+1.  Open the set measurements dialogue (*Analyze ➜ Set Measurements*),
     uncheck everything besides *Area*, and click *OK*.
 
 ![](figures/fig7.png)
 
-11. Open the *Analyze Particles* dialogue (*Analyze ➜ Analyze
+1.  Open the *Analyze Particles* dialogue (*Analyze ➜ Analyze
     Particles*) and choose the following settings:
 
-<!-- end list -->
-
-  - *Size*: 0-Infinity
-  - *Roundness*: 0-1
-  - Show: Outlines
-  - Check *Display results*, *Clear results* and *Include holes* (if
+-   *Size*: 0-Infinity \[0 is chosen to demonstrate the effect of a
+    small minimum value (see next points) - in most cases it makes sense
+    to start from 1-Infinity right away\]
+-   *Roundness*: 0-1
+-   Show: Outlines
+-   Check *Display results*, *Clear results* and *Include holes* (if
     there is more than one scan per sample, it can also be a good idea
     *not* to choose *Clear results* to be able to combine the
     measurements of all scans and save all results together in a single
@@ -116,29 +127,27 @@ macro.
 
 ![](figures/fig8.png)
 
-12. Look at the outlines to check if non-leaf particles were measured.
+1.  Look at the outlines to check if non-leaf particles were measured.
 
-<!-- end list -->
-
-  - Solutions if there are small non-leaf particles:
-      - Use the pencil tool to remove small artefacts
-      - Use the rectangle tool (left end of the toolbar) to choose a
+-   Solutions if there are small non-leaf particles:
+    -   Use the pencil tool to remove small artefacts
+    -   Use the rectangle tool (left end of the toolbar) to choose a
         subset of the Image area (useful if there are shading artefacts
         near the borders)
-      - Repeat the *Analyze Particles* step with a minimum value for
-        *Size*
+    -   Repeat the *Analyze Particles* step with a different minimum
+        value for *Size*
 
 *initial run:* ![](figures/fig9.png)
 
 *after setting Size to 1-Infinity cm²:* ![](figures/fig10.png)
 
-13. Click on the outline file and choose *File ➜ Save as ➜ Jpeg* in the
+1.  Click on the outline file and choose *File ➜ Save as ➜ Jpeg* in the
     main window to save it (append the original filename to
     `name_outlines.jpg`)
 
-14. Choose *File ➜ Save as* in the Results window to save the leaf area
+2.  Choose *File ➜ Save as* in the Results window to save the leaf area
     measurements as `name_results.xls`.
 
-15. Your project folder should look like this now:
+3.  Your project folder should look like this now:
 
 ![](figures/fig11.png)
