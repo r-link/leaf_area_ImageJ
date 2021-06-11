@@ -60,7 +60,7 @@ macro.
     largest square in the calibration file, which I knew to be 4 x 4
     cm²).
 
-![](figures/fig1.png)
+    ![](figures/fig1.png)
 
 3.  Set the scale by going to the **Analyze ➜ Set Scale** menu.
 
@@ -69,7 +69,7 @@ macro.
     **cm** and - *very important* - mark the box **Global** to make sure
     that the scale is the same across all opened documents.
 
-![](figures/fig2.png)
+    ![](figures/fig2.png)
 
 5.  Open the file with the image you want to analyze in ImageJ (drag and
     drop!). If setting the scale worked, the size of the image should
@@ -77,7 +77,7 @@ macro.
     popup window opens asking you whether you want to keep the global
     calibration, say yes!
 
-![](figures/fig3.png)
+    ![](figures/fig3.png)
 
 6.  Make sure that the image is in an 8bit black and white format (click
     on **Image ➜ Type ➜ 8bit**) to avoid problems with thresholding.
@@ -93,7 +93,7 @@ macro.
         the leaves as possible,
     -   press **Apply** and close the **Threshold** window.
 
-![](figures/fig4.png)
+    ![](figures/fig4.png)
 
 8.  If there are holes in the leaves that connect with the leaf margins,
     pick the *Pipette* tool and click on a black area in the image.
@@ -101,17 +101,17 @@ macro.
     they will not affect the measurement if the “Include holes” option
     is selected (see below).
 
-![](figures/fig5.png)
+    ![](figures/fig5.png)
 
 9.  Now, choose the *Pencil tool* and close the holes manually (I closed
     all, but that’s not necessary).
 
-![](figures/fig6.png)
+    ![](figures/fig6.png)
 
 10. Open the set measurements dialogue (*Analyze ➜ Set Measurements*),
     uncheck everything besides *Area*, and click *OK*.
 
-![](figures/fig7.png)
+    ![](figures/fig7.png)
 
 11. Open the *Analyze Particles* dialogue (*Analyze ➜ Analyze
     Particles*) and choose the following settings:
@@ -119,15 +119,18 @@ macro.
 -   *Size*: 0-Infinity \[0 is chosen to demonstrate the effect of a
     small minimum value (see next points) - in most cases it makes sense
     to start from 1-Infinity right away\]
+
 -   *Roundness*: 0-1
+
 -   Show: Outlines
+
 -   Check *Display results*, *Clear results* and *Include holes* (if
     there is more than one scan per sample, it can also be a good idea
     *not* to choose *Clear results* to be able to combine the
     measurements of all scans and save all results together in a single
     file)
 
-![](figures/fig8.png)
+    ![](figures/fig8.png)
 
 12. Look at the outlines to check if non-leaf particles were measured.
 
@@ -152,4 +155,4 @@ macro.
 
 15. Your project folder should look like this now:
 
-![](figures/fig11.png)
+    ![](figures/fig11.png)
